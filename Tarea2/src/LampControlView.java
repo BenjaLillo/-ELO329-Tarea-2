@@ -8,5 +8,9 @@ public class LampControlView extends VBox {
         Image img = new Image("rsc/powerImage.jpg");
         ImageView view = new ImageView(img);
         // ¿?
+
+        view.setOnMouseClicked(e -> System.out.println("Click!"));
+
+        getChildren().addAll(view);
     }
 }
