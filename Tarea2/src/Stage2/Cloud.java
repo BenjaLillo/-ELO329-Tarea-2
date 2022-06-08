@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Cloud {
     public Cloud() {
         lamps = new ArrayList<Lamp>();
+        rollerShades = new ArrayList<RollerShade>();
     }
     public void addLamp(Lamp l){
         lamps.add(l);
