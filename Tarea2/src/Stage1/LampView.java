@@ -3,12 +3,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 
 public class LampView extends Group {
-    private Polygon lampshade;
+    public Polygon lampshade;
     int r,g,b;
 
     public LampView () {
         Polygon base = new Polygon();
-        Polygon head = new Polygon();
+        lampshade = new Polygon();  //se define como una instancia de Polygon
 
         base.getPoints().addAll(new Double[]{
                 18d, 20d,
@@ -21,19 +21,20 @@ public class LampView extends Group {
                 27d, 50d,
                 22d, 50d,
                 22d, 20d});
-        base.setFill(Color. rgb(r,g,b));
+        base.setFill(Color.GREEN);
 
-        head.getPoints().addAll(new Double[]{
+        lampshade.getPoints().addAll(new Double[]{   //nuevo polígono correspondiente a la cabeza de la lámpara
                 10d, 0d,
                 30d, 0d,
                 40d, 20d,
                 0d, 20d
         });
-        head.setFill(Color.GREEN);
+        lampshade.setFill(Color.BLACK);
 
-        getChildren().addAll(base, head /* ¿? */);
+        getChildren().addAll(base,lampshade);
     }
     public void setColor(short r, short g, short b){
+        lampshade.setFill(Color.rgb(r,g,b));    //cambiar color de la cabeza de la lámpara
         this.r = r;
         this.g = g;
         this.b = b;

@@ -1,9 +1,13 @@
 import javafx.scene.Node;
 
-public class Lamp {
+public class Lamp extends DomoticDevice{
+    //Código rellenado (copiado de Lamp del Stage1)
     public Lamp (int channel){
+        super(channel); //Añadido dado que ahora Lamp extiende DomoticDevice
         this.channel= channel;
-        r=g=b= 255;
+        r=g=b= 255; //por defecto
+        r=b=0;
+        g=128;  //color verde para probar Stage1
         state = LampState.OFF;
         view = new LampView();
     }
