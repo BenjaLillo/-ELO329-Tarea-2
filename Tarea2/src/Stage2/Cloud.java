@@ -11,14 +11,25 @@ public class Cloud {
     public void addRollerShade(RollerShade rs){ //Método creado
         rollerShades.add(rs);
     }
-    public void startShadeUp(int channel){ //Método creado
 
+    public RollerShade getShadeAtChannel(int channel){
+        for (RollerShade rs: rollerShades)
+            if (rs.getChannel() ==channel)
+                return rs;
+        return null;
+    }
+
+    public void startShadeUp(int channel){ //Método creado
+        RollerShade rs = getShadeAtChannel(channel);
+        if (rs != null) rs.startUp();
     }
     public void startShadeDown(int channel){    //Método creado
-
+        RollerShade rs = getShadeAtChannel(channel);
+        if (rs != null) rs.startDown();
     }
     public void stopShade(int channel){
-
+        RollerShade rs = getShadeAtChannel(channel);
+        if (rs != null) rs.stop();
     }
     public Lamp getLampAtChannel( int channel){
         for (Lamp l: lamps)
