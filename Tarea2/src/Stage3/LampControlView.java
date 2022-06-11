@@ -1,8 +1,8 @@
-package src;
 
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,7 +23,7 @@ public class LampControlView extends VBox {
     public LampControlView(ArrayList<LampControl> lampcontrol_list) {
 
         /* SE CREA LA IMAGEN Y SE CONFIGURA PARA QUE APAGE EL CONTROL CON EL CANAL ACTUAL */
-        Image img = new Image("rsc/powerImage.jpg");
+        Image img = new Image("rsc/power.png");
         ImageView view = new ImageView(img);
         view.setOnMouseClicked(evento -> {
             lampcontrol_list.get(ch-2).pressPower();
@@ -84,6 +84,7 @@ public class LampControlView extends VBox {
         gridPane.setMinSize(200, 200);
         gridPane.setAlignment(Pos.BASELINE_RIGHT);
         gridPane.add(view,1,0);
+        gridPane.setHalignment(view, HPos.CENTER);
         gridPane.add(spinner,1,1);
         gridPane.add(sliders_view,1,2);
         getChildren().addAll(gridPane); //¿que hace esto?

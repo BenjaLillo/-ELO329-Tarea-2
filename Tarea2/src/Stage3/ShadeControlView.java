@@ -1,5 +1,6 @@
-package src;
 
+
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -29,13 +30,13 @@ public class ShadeControlView extends BorderPane {
         down.setOnMouseClicked( e-> sc.startDown());
         channelButton_stop.setOnAction( e-> sc.stop());
 
-        Rectangle botonera = new Rectangle(70,70, Color.LIGHTGRAY);
+        Rectangle botonera = new Rectangle(100,100, Color.LIGHTGRAY);
         botonera.setStroke(Color.BLACK);
 
         stack.getChildren().addAll(botonera, up, down, channelButton_stop);
 
-        stack.setAlignment(up, Pos.TOP_CENTER);
-        stack.setAlignment(down, Pos.BOTTOM_CENTER);
+        stack.setMargin(up, new Insets(0,0,50,0));
+        stack.setMargin(down, new Insets(50,0,0,0));
         stack.setAlignment(channelButton_stop, Pos.CENTER);
         setCenter(stack);
 

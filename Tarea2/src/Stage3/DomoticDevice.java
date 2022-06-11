@@ -1,5 +1,3 @@
-package src;
-
 public abstract class DomoticDevice {
     public DomoticDevice(int ch){
         channel = ch;

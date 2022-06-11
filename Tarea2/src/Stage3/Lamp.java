@@ -1,5 +1,3 @@
-package src;
-
 import javafx.scene.Node;
 
 public class Lamp extends DomoticDevice{

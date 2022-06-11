@@ -1,4 +1,4 @@
-package src;
+
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class Stage2 extends Application {
+public class Stage3 extends Application {
     public void start(Stage primaryStage) {
         /* SE CREA LA NUBE, SE INICIAN LAS LÁMPARAS Y SUS CONTROLES*/
         Cloud cloud = new Cloud();
@@ -50,7 +50,7 @@ public class Stage2 extends Application {
 
 
         /* SE ORDENA LA ESCENA*/
-        Scene scene = new Scene(pane, 400, 400);
+        Scene scene = new Scene(pane, 500, 500);
         primaryStage.setTitle("Domotic Devices Simulator");
         primaryStage.setScene(scene);
         primaryStage.show();
