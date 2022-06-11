@@ -1,4 +1,4 @@
-
+package src;
 
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
@@ -12,8 +12,7 @@ public class LampView extends Group {
         Polygon base = new Polygon();
         lampshade = new Polygon();  //se define como una instancia de Polygon
 
-        base.getPoints().addAll(new Double[]{
-                18d, 20d,
+        base.getPoints().addAll(18d, 20d,
                 18d, 50d,
                 13d, 50d,
                 10d, 53d,
@@ -22,23 +21,37 @@ public class LampView extends Group {
                 30d, 53d,
                 27d, 50d,
                 22d, 50d,
-                22d, 20d});
+                22d, 20d);
         base.setFill(Color.GREEN);
 
-        lampshade.getPoints().addAll(new Double[]{   //nuevo polígono correspondiente a la cabeza de la lámpara
+        lampshade.getPoints().addAll(//nuevo polígono correspondiente a la cabeza de la lámpara
                 10d, 0d,
                 30d, 0d,
                 40d, 20d,
-                0d, 20d
-        });
+                0d, 20d);
         lampshade.setFill(Color.BLACK);
 
         getChildren().addAll(base,lampshade);
     }
-    public void setColor(short r, short g, short b){
+
+    public void setColors(short r, short g, short b){
         lampshade.setFill(Color.rgb(r,g,b));    //cambiar color de la cabeza de la lámpara
         this.r = r;
         this.g = g;
+        this.b = b;
+    }
+
+    /* MÉTODOS PARA DEFINIR COLORES INDIVIDUALMENTE */
+    public void setColorRed(short r){
+        lampshade.setFill(Color.rgb(r,g,b));    //cambiar color de la cabeza de la lámpara
+        this.r = r;
+    }
+    public void setColorGreen(short g){
+        lampshade.setFill(Color.rgb(r,g,b));    //cambiar color de la cabeza de la lámpara
+        this.g = g;
+    }
+    public void setColorBlue(short b){
+        lampshade.setFill(Color.rgb(r,g,b));    //cambiar color de la cabeza de la lámpara
         this.b = b;
     }
 }

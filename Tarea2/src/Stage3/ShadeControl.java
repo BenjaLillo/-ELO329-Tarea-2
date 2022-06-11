@@ -1,4 +1,4 @@
-
+package src;
 
 import javafx.scene.layout.BorderPane;
 

@@ -1,4 +1,4 @@
-
+package src;
 
 public class DomoticDeviceControl {
     public DomoticDeviceControl(int ch, Cloud c){

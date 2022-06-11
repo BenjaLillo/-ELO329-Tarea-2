@@ -1,4 +1,4 @@
-
+package src;
 
 import javafx.scene.Node;
 
@@ -18,14 +18,29 @@ public class Lamp extends DomoticDevice{
     }
     public void changePowerState(){
         state = state==LampState.ON ? LampState.OFF : LampState.ON;
-        if (state==LampState.OFF) view.setColor((short)0,(short)0, (short)0);
-        else view.setColor(r,g,b);
+        if (state==LampState.OFF) view.setColors((short)0,(short)0, (short)0);
+        else view.setColors(r,g,b);
     }
     public Node getView() {
         return view;
     }
     public void changeRed(short new_val){
-        r = new_val;
+        if(state == LampState.ON) {
+            r = new_val;
+            view.setColorRed(new_val);
+        }
+    }
+    public void changeGreen(short new_val){
+        if(state == LampState.ON) {
+            g = new_val;
+            view.setColorGreen(new_val);
+        }
+    }
+    public void changeBlue(short new_val){
+        if(state == LampState.ON) {
+            b = new_val;
+            view.setColorBlue(new_val);
+        }
     }
 
     private int channel;

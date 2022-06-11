@@ -1,4 +1,4 @@
-
+package src;
 
 import javafx.scene.layout.Pane;
 
@@ -19,6 +19,12 @@ public class LampControl extends DomoticDeviceControl{
     //public Pane getView() { return view;}
     public void changeColorRed(short new_val){
         cloud.getLampAtChannel(channel).changeRed(new_val);
+    }
+    public void changeColorGreen(short new_val){
+        cloud.getLampAtChannel(channel).changeGreen(new_val);
+    }
+    public void changeColorBlue(short new_val){
+        cloud.getLampAtChannel(channel).changeBlue(new_val);
     }
     private int channel;
     private Cloud cloud;
