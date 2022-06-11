@@ -27,7 +27,7 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 run: $(MAIN).class
-	$(JVM) $(MAIN) $(FILE)
+	$(JVM) --module-path $(JavaFX) --add-modules javafx.controls,javafx.fxml $(MAIN) 
 
 clean:
 	$(RM) *.class

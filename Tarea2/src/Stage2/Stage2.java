@@ -10,6 +10,8 @@ public class Stage2 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    @Override
     public void start(Stage primaryStage) {
         int lampChannel=1;
         Cloud cloud = new Cloud();
