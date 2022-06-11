@@ -25,8 +25,6 @@ public class ShadeControl extends DomoticDeviceControl{
         for (int c:channelList){
             if (c == channel){
                 int index = channelList.indexOf(channel);
-                System.out.println(channelList.size());
-
                 index= index + 1;
                 if (index > channelList.size()-1){
                     index = channelList.size()-1;
@@ -40,7 +38,6 @@ public class ShadeControl extends DomoticDeviceControl{
         for (int c:channelList){
             if (c == channel){
                 int index = channelList.indexOf(channel);
-                System.out.println(index);
                 index= index - 1;
                 if (index < 0){
                     index = 0;

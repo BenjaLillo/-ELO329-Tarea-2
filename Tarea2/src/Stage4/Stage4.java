@@ -41,7 +41,6 @@ public class Stage4 extends Application {
         ArrayList<Integer> shadecontrol_list = new ArrayList<>();
         shadecontrol_list.add(shadeChannel);
         shadecontrol_list.add(shadeChannel2);
-        System.out.println(shadecontrol_list);
         cloud.addRollerShade(rs);
         cloud.addRollerShade(rs2);
 
