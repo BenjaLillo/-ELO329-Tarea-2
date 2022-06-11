@@ -50,12 +50,7 @@ FILE=
 # NAME = Camilo        Juan
 
 CLASSES = \
-	Stage2.java\
-	ShadeControlView.java\
-	ShadeControl.java\
-	RollerShadeView.java\
-	RollerShade.java\
-	MotorState.java\
+	Stage1.java\
 	LampView.java\
 	LampState.java\
 	LampControlView.java\
@@ -69,7 +64,7 @@ CLASSES = \
 # MAIN is a variable with the name of the file containing the main method
 #
 
-MAIN = Stage2
+MAIN = Stage1
 
 #
 # the default make target entry
