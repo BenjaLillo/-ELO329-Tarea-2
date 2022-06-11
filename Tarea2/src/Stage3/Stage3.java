@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class Stage3 extends Application {
     public void start(Stage primaryStage) {
-        /* SE CREA LA NUBE, SE INICIAN LAS LÁMPARAS Y SUS CONTROLES*/
+        /* SE CREA LA NUBE, SE INICIAN LAS LAMPARAS Y SUS CONTROLES*/
         Cloud cloud = new Cloud();
         Lamp lamp2 = new Lamp(2);
         Lamp lamp3 = new Lamp(3);

@@ -3,7 +3,7 @@
 JFLAGS = -g
 JC = javac
 JVM= java
-FILE=
+JavaFX="D:\Programas\Java\javafx-sdk-18.0.1\lib"
 
 
 
@@ -12,7 +12,7 @@ FILE=
 
 
 .java.class:
-	$(JC) $(JFLAGS) $*.java
+	$(JC) $(JFLAGS) $*.java --module-path $(JavaFX) --add-modules=javafx.controls
 
 
 

@@ -7,6 +7,9 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 public class Stage2 extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
     public void start(Stage primaryStage) {
         int lampChannel=1;
         Cloud cloud = new Cloud();
