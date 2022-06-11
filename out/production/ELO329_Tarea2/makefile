@@ -1,24 +1,15 @@
-
-
 JFLAGS = -g
 JC = javac
-JVM= java
-FILE=
-
-
+JVM= java 
+JavaFX="D:\Programas\Java\javafx-sdk-18.0.1\lib"
 
 .SUFFIXES: .java .class
 
-
-
 .java.class:
-	$(JC) $(JFLAGS) $*.java
-
-
-
+	$(JC) $(JFLAGS) $*.java --module-path $(JavaFX) --add-modules=javafx.controls
 
 CLASSES = \
-	Stage3.java\
+	Stage2.java\
 	ShadeControlView.java\
 	ShadeControl.java\
 	RollerShadeView.java\
@@ -33,14 +24,14 @@ CLASSES = \
 	DomoticDevice.java\
 	Cloud.java
 
-MAIN = Stage3
+MAIN = Stage2
 
 default: classes
 
 classes: $(CLASSES:.java=.class)
 
 run: $(MAIN).class
-	$(JVM) $(MAIN) $(FILE)
+	$(JVM) --module-path $(JavaFX) --add-modules javafx.controls,javafx.fxml $(MAIN) 
 
 clean:
 	$(RM) *.class
